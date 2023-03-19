@@ -1,6 +1,7 @@
 @import 'colors';
 
 .container {
+	opacity: 1;
 	display: flex;
 	background-color: $darkelements;
 	width: 450px;
@@ -10,7 +11,7 @@
 	box-shadow: 0 0 5px $darkbackground;
 	input {
 		border: none;
-		margin-top: 5px;
+		margin-top: 9px;
 		width: 350px;
 		height: 35px;
 		font-family: 'Nunito Sans', sans-serif;
@@ -25,7 +26,7 @@
 	img {
 		width: 20px;
 		height: 20px;
-		margin-top: 10px;
+		margin-top: 15px;
 		margin-left: 20px;
 		margin-right: 20px;
 	}

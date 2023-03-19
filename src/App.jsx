@@ -1,13 +1,12 @@
-
 import './App.css'
 import { Header } from './Header/Header'
-import { Card } from './UI/Card'
-import { Searchbar } from './UI/Searchbar'
+import { Main } from './Main/Main'
+
 
 function App() {
   return <>
     <Header />
-    <Searchbar />
+    <Main />
   </>
 }
 
