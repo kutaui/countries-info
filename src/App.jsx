@@ -6,7 +6,7 @@ import { Card } from './UI/Card'
 function App() {
   return <>
     <Header />
-    <Card />
+
   </>
 }
 
