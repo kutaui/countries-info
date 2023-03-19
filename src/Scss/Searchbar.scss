@@ -1,0 +1,32 @@
+@import 'colors';
+
+.container {
+	display: flex;
+	background-color: $darkelements;
+	width: 450px;
+	height: 50px;
+	border-radius: 5px;
+	margin-top: 50px;
+	box-shadow: 0 0 5px $darkbackground;
+	input {
+		border: none;
+		margin-top: 5px;
+		width: 350px;
+		height: 35px;
+		font-family: 'Nunito Sans', sans-serif;
+		color: $darktext-lightelement;
+		background-color: $darkelements;
+	}
+
+	input::placeholder {
+		color: $darktext-lightelement;
+	}
+
+	img {
+		width: 20px;
+		height: 20px;
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
