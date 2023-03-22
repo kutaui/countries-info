@@ -3,7 +3,7 @@ import { Card } from "../UI/Card"
 import api from "../API/countrydata"
 
 
-export const Countries = () => {
+export const Countries = ({ countryQuery }) => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
@@ -19,8 +19,10 @@ export const Countries = () => {
         fetchCountry()
     }, []);
 
+
+
     return <>
-        {countries.map((country, index) => {
+        {countryQuery && countries.filter((country) => country.name.common.toLowerCase().includes(countryQuery)).map((country, index) => {
             const formattedPop = country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
             return <Card key={index} title={country.name.common} capital={country.capital} region={country.region} pop={formattedPop} flag={country.flags.png} />
         })}
