@@ -1,18 +1,32 @@
 @import 'colors';
 
-.card {
+@mixin card {
 	margin-top: 50px;
 	border-radius: 5px;
-	background-color: $darkelements;
 	height: 320px;
 	width: 250px;
+}
 
+@mixin content {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+}
+
+@mixin content-all {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 600;
+
+	margin-left: 25px;
+	margin-bottom: -18px;
+}
+
+.card-dark {
+	@include card;
+	background-color: $darkelements;
 	.content {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: start;
-
+		@include content;
 		h5 {
 			font-weight: 650;
 		}
@@ -21,11 +35,31 @@
 		}
 	}
 	.content > * {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 600;
+		@include content-all;
 		color: $darktext-lightelement;
-		margin-left: 25px;
-		margin-bottom: -18px;
+	}
+
+	.content h4 {
+		font-weight: 800;
+		margin-bottom: -10px;
+	}
+
+	img {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		width: 250px;
+	}
+}
+
+.card-light {
+	@include card;
+	background-color: $lightbackground;
+	.content {
+		@include content;
+	}
+	.content > * {
+		@include content-all;
+		color: $lighttext;
 	}
 
 	.content h4 {

@@ -3,7 +3,7 @@ import { Card } from "../UI/Card"
 import api from "../API/countrydata"
 
 
-export const Countries = ({ countryQuery }) => {
+export const Countries = (props) => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
@@ -20,9 +20,14 @@ export const Countries = ({ countryQuery }) => {
     }, []);
 
 
+    let filteredCountries = countries.filter((country) => country.name.common.toLowerCase().includes(props.countryQuery))
+
+    if (props.regionSelect !== "all") {
+        filteredCountries = filteredCountries.filter((country) => country.region.toLowerCase() === props.regionSelect);
+    }
 
     return <>
-        {countryQuery && countries.filter((country) => country.name.common.toLowerCase().includes(countryQuery)).map((country, index) => {
+        {filteredCountries.map((country, index) => {
             const formattedPop = country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
             return <Card key={index} title={country.name.common} capital={country.capital} region={country.region} pop={formattedPop} flag={country.flags.png} />
         })}

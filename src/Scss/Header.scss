@@ -1,26 +1,65 @@
 @import 'colors';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-.header {
+@mixin header {
 	margin-top: -10px;
 	margin-left: -10px;
-	background-color: $darkelements;
 	width: 1442px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+}
+
+@mixin h2 {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 800;
+	margin-left: -400px;
+}
+
+@mixin theme {
+	display: flex;
+	margin-right: -400px;
+	cursor: pointer;
+}
+
+.header-dark {
+	@include header;
+	background-color: $darkelements;
 
 	h2 {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 800;
+		@include h2;
 		color: $darktext-lightelement;
-		margin-left: -400px;
 	}
 }
 
-.theme {
-	display: flex;
-	margin-right: -400px;
+.header-light {
+	@include header;
+	background-color: $lightbackground;
+
+	h2 {
+		@include h2;
+		color: $lighttext;
+	}
+}
+
+.theme-dark {
+	@include theme;
+
+	img {
+		height: 20px;
+		margin-top: 20px;
+	}
+
+	h5 {
+		font-family: 'Nunito Sans', sans-serif;
+		font-weight: 600;
+		color: $darktext-lightelement;
+		margin-left: 10px;
+	}
+}
+
+.theme-light {
+	@include theme;
 	img {
 		height: 20px;
 		margin-top: 20px;
@@ -28,7 +67,7 @@
 	h5 {
 		font-family: 'Nunito Sans', sans-serif;
 		font-weight: 600;
-		color: $darktext-lightelement;
+		color: $lighttext;
 		margin-left: 10px;
 	}
 }

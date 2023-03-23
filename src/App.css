@@ -1,3 +1,7 @@
 body {
 	background-color: hsl(207, 26%, 17%);
 }
+
+body.light-mode {
+	background-color: hsl(0, 0%, 87%);
+}
