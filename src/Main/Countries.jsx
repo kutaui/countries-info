@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../UI/Card"
 import api from "../API/countrydata"
+import { Link } from "react-router-dom";
 
 
 export const Countries = (props) => {
@@ -29,7 +30,9 @@ export const Countries = (props) => {
     return <>
         {filteredCountries.map((country, index) => {
             const formattedPop = country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-            return <Card key={index} title={country.name.common} capital={country.capital} region={country.region} pop={formattedPop} flag={country.flags.png} />
+            return <Link key={index} to={`/${country.name.common}`} >
+                <Card key={index} title={country.name.common} capital={country.capital} region={country.region} pop={formattedPop} flag={country.flags.png} />
+            </Link>
         })}
     </>
 }

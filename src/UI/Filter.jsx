@@ -1,6 +1,6 @@
 import Select from "react-select";
 import { useSelector } from "react-redux"
-
+import classes from "../../css/Filter.module.css"
 
 const options = [
     { value: "all", label: "All" },
@@ -16,10 +16,12 @@ export const Filter = (props) => {
     const theme = useSelector(state => state.theme.dark)
 
     const styles = {
+
         container: (baseStyles) => ({
             ...baseStyles,
             marginTop: "50px",
-            border: "none"
+            border: "none",
+
         }),
         control: (baseStyles) => ({
             ...baseStyles,
@@ -43,6 +45,7 @@ export const Filter = (props) => {
             ...baseStyles,
             backgroundColor: !theme ? "hsl(208, 23%, 22%)" : "hsl(0, 0%, 98%)",
             color: !theme ? "white" : "hsl(200, 15%, 8%)",
+            width: "200px",
 
         }),
         option: (baseStyles, state) => ({
@@ -73,7 +76,7 @@ export const Filter = (props) => {
         props.onDropdownChange(value.value)
     }
 
-    return <div>
+    return <div className={classes.filtcont}>
         <Select onChange={handleSelectvalue} styles={styles} options={options} placeholder="Filter by Region" />
     </div>
 

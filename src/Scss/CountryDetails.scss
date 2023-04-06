@@ -1,46 +1,14 @@
 @import 'colors';
 
-.container {
-	display: flex;
-	margin-top: 50px;
-	margin-left: 70px;
-}
-
-.button {
-	margin-top: 50px;
-	margin-left: 70px;
-	background-color: $darkelements;
-	border-radius: 5px;
-	border: 1px solid $darkbackground;
-	box-shadow: 1px 1px 7px rgb(24, 23, 23);
-	width: 120px;
-	height: 35px;
-	color: $darktext-lightelement;
-	font-size: 15px;
-
-	&:hover {
-		cursor: pointer;
-		background-color: $darkbackground;
-	}
-}
-
-.image {
-	height: auto;
-	width: 500px;
-}
-
-.infocont {
+@mixin infocont {
 	margin-left: 120px;
-	h1 {
-		color: $darktext-lightelement;
-	}
+
 	.info {
 		margin-top: -20px;
 		display: flex;
 		flex-direction: column;
 		h5 {
 			font-size: 12px;
-			color: $darktext-lightelement;
 			font-weight: 600;
 		}
 		h5 > span {
@@ -52,24 +20,106 @@
 	}
 }
 
-.borders {
+@mixin borders {
 	margin-right: 10px;
 	margin-bottom: 10px;
-	background-color: $darkelements;
-	border-radius: 5px;
-	border: 1px solid $darkbackground;
+	border-radius: 3px;
 	box-shadow: 1px 1px 7px rgb(24, 23, 23);
 	width: 100px;
 	height: 30px;
-	color: $darktext-lightelement;
+	cursor: pointer;
 }
 
-.bordercont {
+@mixin button {
+	margin-top: 50px;
+	margin-left: 70px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 7px rgb(24, 23, 23);
+	width: 120px;
+	height: 35px;
+	font-size: 15px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.container {
+	display: flex;
+	margin-top: 50px;
+	margin-left: 70px;
+}
+
+.button-dark {
+	@include button;
+	border: 1px solid $darkbackground;
+	background-color: $darkelements;
+	color: $darktext-lightelement;
+	&:hover {
+		background-color: $darkbackground;
+	}
+}
+.button-light {
+	@include button;
+	border: 1px solid $lightbackground;
+	background-color: $lightbackground;
+	color: $lighttext;
+	&:hover {
+		background-color: $darktext-lightelement;
+	}
+}
+
+.image {
+	height: auto;
 	width: 500px;
-	margin-top: 35px;
+}
+
+.infocont-dark {
+	@include infocont;
+	h1 {
+		color: $darktext-lightelement;
+	}
 
 	h5 {
+		color: $darktext-lightelement;
+	}
+}
+.infocont-light {
+	@include infocont;
+	h1 {
+		color: $lighttext;
+	}
+
+	h5 {
+		color: $lighttext;
+	}
+}
+
+.borders-dark {
+	@include borders;
+	color: $darktext-lightelement;
+	border: 1px solid $darkbackground;
+	background-color: $darkelements;
+}
+.borders-light {
+	@include borders;
+	color: $lighttext;
+	border: 1px solid $lightbackground;
+	background-color: $lightbackground;
+}
+
+.bordercont-dark {
+	width: 500px;
+	margin-top: 35px;
+	h5 {
 		color: white;
+		display: inline-block;
+	}
+}
+.bordercont-light {
+	width: 500px;
+	margin-top: 35px;
+	h5 {
+		color: $lighttext;
 		display: inline-block;
 	}
 }
@@ -78,6 +128,7 @@
 	position: absolute;
 	float: rigth;
 	right: 250px;
+	width: 200px;
 }
 
 .borderdiv {

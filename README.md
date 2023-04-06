@@ -1,8 +1,12 @@
-# Countreis
+# Countries
 
-## Work in progress
+## Almost Done
 
-Made for: 1440px
-Will add responsiveness
+## Funcionalities
 
-Live: https://react-countries.onrender.com
+Responsiveness for most used screen sizes. (1440px and 360px) <br>
+Theme changer with Redux. <br>
+Dynamic country details page with Router. <br>
+Filter and search. <br>
+
+## Live: https://react-countries.onrender.com

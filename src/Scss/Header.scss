@@ -1,24 +1,24 @@
 @import 'colors';
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 @mixin header {
 	margin-top: -10px;
 	margin-left: -10px;
-	width: 1442px;
+	width: 100vw;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 @mixin h2 {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 800;
-	margin-left: -400px;
+	padding-left: 50px;
 }
 
 @mixin theme {
 	display: flex;
-	margin-right: -400px;
+	padding-right: 50px;
 	cursor: pointer;
 }
 
@@ -69,5 +69,38 @@
 		font-weight: 600;
 		color: $lighttext;
 		margin-left: 10px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.header-dark {
+		h2 {
+			padding-left: 20px;
+			font-size: 16px;
+		}
+	}
+
+	.theme-dark {
+		img {
+			margin-top: 18px;
+		}
+		h5 {
+			font-size: 12px;
+		}
+	}
+	.header-light {
+		h2 {
+			padding-left: 20px;
+			font-size: 16px;
+		}
+	}
+
+	.theme-light {
+		img {
+			margin-top: 18px;
+		}
+		h5 {
+			font-size: 12px;
+		}
 	}
 }

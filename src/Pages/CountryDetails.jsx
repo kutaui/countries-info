@@ -1,10 +1,13 @@
 import { Link, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useEffect, useState, } from "react"
 import styles from "../../css/CountryDetails.module.css"
 import api from "../API/countrydata"
+import { useSelector } from "react-redux"
 
 
 export const CountryDetails = () => {
+    const theme = useSelector(state => state.theme.dark)
+
     const [country, setCountry] = useState([]);
     const params = useParams()
 
@@ -25,7 +28,7 @@ export const CountryDetails = () => {
 
 
     return <>
-        <Link to=".." >  <button className={styles.button} >Back </button></Link>
+        <Link to=".." >  <button className={!theme ? styles["button-dark"] : styles["button-light"]} >Back </button></Link>
         {country.map((country, index) => {
             const nativeNameKey = Object.keys(country.name.nativeName)[0];
             const nativeName = country.name.nativeName[nativeNameKey].common;
@@ -35,14 +38,14 @@ export const CountryDetails = () => {
             const languageValues = Object.values(country.languages)
             const languages = languageValues.join(", ")
             const borders = country.borders && country.borders.length > 0 ? (
-                country.borders.map((border, index) => <button className={styles.borders} key={index}>{border}</button>)
+                country.borders.map((border, index) => <button className={!theme ? styles["borders-dark"] : styles["borders-light"]} key={index}>{border}</button>)
             ) : null;
 
 
 
             return <div className={styles.container} key={index}>
                 <img src={country.flags.png} alt="" className={styles.image} />
-                <div className={styles.infocont}>
+                <div className={!theme ? styles["infocont-dark"] : styles["infocont-light"]}>
                     <h1>{country.name.common} </h1>
                     <div className={styles.info}>
                         <div>
@@ -72,7 +75,7 @@ export const CountryDetails = () => {
                             </div>
                         </div>
                     </div>
-                    {country.borders && <div className={styles.bordercont}><h5>Border Countries:</h5> <span>{borders}</span></div>}
+                    {country.borders && <div className={!theme ? styles["bordercont-dark"] : styles["bordercont-light"]}><h5>Border Countries:</h5> <span>{borders}</span></div>}
                 </div>
             </div>
         })}
