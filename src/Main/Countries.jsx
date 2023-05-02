@@ -30,7 +30,7 @@ export const Countries = (props) => {
     return <>
         {filteredCountries.map((country, index) => {
             const formattedPop = country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-            return <Link key={index} to={`/${country.name.common}`} >
+            return <Link style={{ textDecoration: 'none' }} key={index} to={`/${country.name.common}`} >
                 <Card key={index} title={country.name.common} capital={country.capital} region={country.region} pop={formattedPop} flag={country.flags.png} />
             </Link>
         })}
