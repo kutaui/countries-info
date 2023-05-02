@@ -3,7 +3,8 @@
 @mixin header {
 	margin-top: -10px;
 	margin-left: -10px;
-	width: 100vw;
+
+	width: 99.3vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -13,7 +14,7 @@
 @mixin h2 {
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 800;
-	padding-left: 50px;
+	padding-left: 65px;
 }
 
 @mixin theme {

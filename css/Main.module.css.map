@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/Scss/Main.scss"],"names":[],"mappings":"AAAA,WACC,YAAA,CACA,6BAAA,CAGD,WACC,gBAAA,CACA,YAAA,CACA,2DAAA,CACA,aAAA,CACA,YAAA,CAGD,qCACC,WACC,aAAA,CAAA","file":"Main.module.css"}
+{"version":3,"sourceRoot":"","sources":["../src/Scss/Main.scss"],"names":[],"mappings":"AAAA;EACC;EACA;;;AAGD;EACC;EAEA;EACA;EACA;EACA;;;AAGD;EACC;IACC","file":"Main.module.css"}
