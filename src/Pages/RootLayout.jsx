@@ -8,8 +8,6 @@ export const RootLayout = () => {
             <Outlet />
         </main>
     </>
-
-
 }
 
 

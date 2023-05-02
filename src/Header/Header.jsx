@@ -15,7 +15,7 @@ export const Header = () => {
             <h2>Where in the world?</h2>
 
             <div onClick={handleThemeChange} className={!theme ? styles["theme-dark"] : styles["theme-light"]}>
-                {!theme ? <img src="assets/theme-dark.png" alt="" /> : <img src="assets/theme-light.png" alt="" />}
+                {!theme ? <img src="/theme-dark.png" alt="" /> : <img src="/theme-light.png" alt="" />}
                 <h5>Dark Mode</h5>
             </div>
 

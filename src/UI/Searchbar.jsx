@@ -11,7 +11,7 @@ export const Searchbar = (props) => {
 
     return <>
         <div className={!theme ? styles["container-dark"] : styles["container-light"]}>
-            {!theme ? <img src="assets/white-search.png" alt="" /> : <img src="assets/black-search.png" alt="" />}
+            {!theme ? <img src="/white-search.png" alt="" /> : <img src="/black-search.png" alt="" />}
             <input type="search" placeholder="Search for a country" onChange={handleInputChange} />
         </div>
     </>

@@ -1,6 +1,6 @@
 # Countries
 
-## Funcionalities
+## Functionalities
 
 ### Responsiveness for most used screen sizes. (1440px and 360px) <br>
 
