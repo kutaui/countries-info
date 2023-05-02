@@ -1,75 +1,84 @@
 @import 'colors';
 
+@mixin img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 250px;
+  object-fit: cover;
+}
+
 @mixin card {
-	margin-top: 50px;
-	border-radius: 5px;
-	height: 320px;
-	width: 250px;
+  margin-top: 50px;
+  border-radius: 5px;
+  height: 320px;
+  width: 250px;
 }
 
 @mixin content {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
 @mixin content-all {
-	font-family: 'Nunito Sans', sans-serif;
-	font-weight: 600;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
 
-	margin-left: 25px;
-	margin-bottom: -18px;
+  margin-left: 25px;
+  margin-bottom: -18px;
 }
 
 .card-dark {
-	@include card;
-	background-color: $darkelements;
-	.content {
-		@include content;
-		h5 {
-			font-weight: 650;
-		}
-		h5 > span {
-			font-weight: 300;
-		}
-	}
-	.content > * {
-		@include content-all;
-		color: $darktext-lightelement;
-	}
+  @include card;
+  background-color: $darkelements;
 
-	.content h4 {
-		font-weight: 800;
-		margin-bottom: -10px;
-	}
+  .content {
+    @include content;
 
-	img {
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
-		width: 250px;
-	}
+    h5 {
+      font-weight: 650;
+    }
+
+    h5 > span {
+      font-weight: 300;
+    }
+  }
+
+  .content > * {
+    @include content-all;
+    color: $darktext-lightelement;
+  }
+
+  .content h4 {
+    font-weight: 800;
+    margin-bottom: -10px;
+  }
+
+  img {
+    @include img;
+  }
 }
 
 .card-light {
-	@include card;
-	background-color: $lightbackground;
-	.content {
-		@include content;
-	}
-	.content > * {
-		@include content-all;
-		color: $lighttext;
-	}
+  @include card;
+  background-color: $lightbackground;
 
-	.content h4 {
-		font-weight: 800;
-		margin-bottom: -10px;
-	}
+  .content {
+    @include content;
+  }
 
-	img {
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
-		width: 250px;
-	}
+  .content > * {
+    @include content-all;
+    color: $lighttext;
+  }
+
+  .content h4 {
+    font-weight: 800;
+    margin-bottom: -10px;
+  }
+
+  img {
+	  @include img;
+  }
 }

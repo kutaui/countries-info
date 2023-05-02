@@ -1,1 +1,69 @@
-.card-dark{margin-top:50px;border-radius:5px;height:320px;width:250px;background-color:#2b3945}.card-dark .content{display:flex;flex-direction:column;justify-content:start;align-items:start}.card-dark .content h5{font-weight:650}.card-dark .content h5>span{font-weight:300}.card-dark .content>*{font-family:"Nunito Sans",sans-serif;font-weight:600;margin-left:25px;margin-bottom:-18px;color:#fff}.card-dark .content h4{font-weight:800;margin-bottom:-10px}.card-dark img{border-top-left-radius:5px;border-top-right-radius:5px;width:250px}.card-light{margin-top:50px;border-radius:5px;height:320px;width:250px;background-color:#f7f7f7}.card-light .content{display:flex;flex-direction:column;justify-content:start;align-items:start}.card-light .content>*{font-family:"Nunito Sans",sans-serif;font-weight:600;margin-left:25px;margin-bottom:-18px;color:#111517}.card-light .content h4{font-weight:800;margin-bottom:-10px}.card-light img{border-top-left-radius:5px;border-top-right-radius:5px;width:250px}/*# sourceMappingURL=Card.module.css.map */
+.card-dark {
+  margin-top: 50px;
+  border-radius: 5px;
+  height: 320px;
+  width: 250px;
+  background-color: hsl(208, 23%, 22%);
+}
+.card-dark .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.card-dark .content h5 {
+  font-weight: 650;
+}
+.card-dark .content h5 > span {
+  font-weight: 300;
+}
+.card-dark .content > * {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-bottom: -18px;
+  color: hsl(0, 0%, 100%);
+}
+.card-dark .content h4 {
+  font-weight: 800;
+  margin-bottom: -10px;
+}
+.card-dark img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.card-light {
+  margin-top: 50px;
+  border-radius: 5px;
+  height: 320px;
+  width: 250px;
+  background-color: hsl(0, 0%, 97%);
+}
+.card-light .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.card-light .content > * {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-bottom: -18px;
+  color: hsl(200, 15%, 8%);
+}
+.card-light .content h4 {
+  font-weight: 800;
+  margin-bottom: -10px;
+}
+.card-light img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 250px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=Card.module.css.map */
