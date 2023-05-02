@@ -5,7 +5,9 @@ export const Card = (props) => {
 
     return <>
         <div className={!theme ? styles["card-dark"] : styles["card-light"]}>
+            <div className={styles.imgContainer}>
             <img src={props.flag} alt="" />
+            </div>
             <div className={styles.content}>
                 <h4>{props.title}</h4>
                 <h5>Population: <span>{props.pop}</span></h5>

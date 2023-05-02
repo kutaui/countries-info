@@ -1,9 +1,15 @@
 @import 'colors';
 
+@mixin imgContainer {
+  aspect-ratio: 16/10;
+  width: 100%;
+}
+
 @mixin img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  width: 250px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -32,7 +38,9 @@
 .card-dark {
   @include card;
   background-color: $darkelements;
-
+  .imgContainer {
+    @include imgContainer;
+  }
   .content {
     @include content;
 
@@ -63,7 +71,9 @@
 .card-light {
   @include card;
   background-color: $lightbackground;
-
+  .imgContainer {
+    @include imgContainer;
+  }
   .content {
     @include content;
   }
@@ -79,6 +89,6 @@
   }
 
   img {
-	  @include img;
+    @include img;
   }
 }

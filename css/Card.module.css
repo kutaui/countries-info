@@ -5,6 +5,10 @@
   width: 250px;
   background-color: hsl(208, 23%, 22%);
 }
+.card-dark .imgContainer {
+  aspect-ratio: 16/10;
+  width: 100%;
+}
 .card-dark .content {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,8 @@
 .card-dark img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  width: 250px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -41,6 +46,10 @@
   height: 320px;
   width: 250px;
   background-color: hsl(0, 0%, 97%);
+}
+.card-light .imgContainer {
+  aspect-ratio: 16/10;
+  width: 100%;
 }
 .card-light .content {
   display: flex;
@@ -62,7 +71,8 @@
 .card-light img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  width: 250px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
